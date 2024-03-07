@@ -14,6 +14,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {},
+      boxShadow: {
+        logoBoxShadow: "0px 4px 4px 0px rgba(29, 173, 190, 0.16)",
+      },
       colors: {
         /* Colors */
         /* cyan */
