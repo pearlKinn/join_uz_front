@@ -7,9 +7,11 @@ interface InputProps {
   id: string;
   placeholder: string;
   type: string;
+  defaultValue: string;
+	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<InputProps> = ({ id, placeholder, type }) => {
+const Input: React.FC<InputProps> = ({ id, placeholder, type, defaultValue,onChange }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => setIsVisible(!isVisible);
@@ -53,6 +55,8 @@ const Input: React.FC<InputProps> = ({ id, placeholder, type }) => {
         id={id}
         placeholder={placeholder}
         maxLength={type === "text" ? 12 : 20}
+        defaultValue={defaultValue}
+        onChange={onChange}
         required
       />
       {type === "password" && (
