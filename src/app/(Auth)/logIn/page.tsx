@@ -15,7 +15,7 @@ const LoginPage = () => {
   return (
     <section className="min-w-[360px] h-lvh flex flex-col">
       <header>
-        <h2 className="sr-only">LoginPage</h2>
+        <h1 className="sr-only">LoginPage</h1>
         <Logo />
       </header>
       <main>
