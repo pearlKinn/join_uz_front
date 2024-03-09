@@ -11,7 +11,9 @@ const LoginPage = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogIn = () => {};
+  const handleLogIn = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+  };
   return (
     <section className="min-w-[360px] h-lvh flex flex-col">
       <header>
