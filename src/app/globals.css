@@ -5,3 +5,33 @@
 text-red {
   color: "red";
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#progress {
+  appearance: none;
+}
+#progress::-webkit-progress-bar {
+  background: #e5e7eb;
+}
+#progress::-webkit-progress-value {
+  background: #4b5563;
+}
+
+.textXS {
+  font-size: 0.75rem; /* 12px */
+  line-height: 150%;
+}
+
+.textSM {
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+
+.textXXL {
+  font-size: 1.5rem; /* 24px */
+  line-height: 120%;
+}
