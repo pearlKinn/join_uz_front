@@ -1,7 +1,7 @@
 "use client";
 
-import React, { MouseEventHandler, ReactNode } from "react";
 import Image from "next/image";
+import React, { MouseEventHandler, ReactNode } from "react";
 
 interface ButtonProps {
   children?: ReactNode;
@@ -26,9 +26,9 @@ const Button: React.FC<ButtonProps> = ({
     xl: "w-[328px] h-12  text-base",
     lg: "w-[328px] h-10  text-base",
     md: "w-40 h-12  text-base",
-    sm: "w-40 h-9 text-sm",
-    xs: "w-20 h-9 text-sm",
-    xxs: "w-[66px] h-7 text-sm",
+    sm: "w-40 h-9 textSM",
+    xs: "w-20 h-9 textSM",
+    xxs: "w-[66px] h-7 textSM",
   };
 
   const types = {

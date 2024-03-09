@@ -63,7 +63,7 @@ const LoginPage = () => {
                 )}
               </button>
               <span
-                className={`inline-block text-sm leading-[21px] font-semibold  ${persistLogin ? "text-gray600" : "text-gray400"}`}
+                className={`inline-block textSM font-semibold  ${persistLogin ? "text-gray600" : "text-gray400"}`}
               >
                 로그인 상태 유지
               </span>
@@ -71,14 +71,14 @@ const LoginPage = () => {
             <div className="flex gap-1">
               <Link
                 href="/findId/authenticationCodeConfirm"
-                className="text-sm leading-[21px] text-gray500"
+                className="textSM text-gray500"
               >
                 아이디
               </Link>
-              <span className="text-sm leading-[21px] text-gray500">ㅣ</span>
+              <span className="textSM text-gray500">ㅣ</span>
               <Link
                 href="/findPw/authenticationCodeConfirm"
-                className="text-sm leading-[21px] text-gray500"
+                className="textSM text-gray500"
               >
                 비밀번호 찾기
               </Link>
@@ -93,7 +93,7 @@ const LoginPage = () => {
           >
             회원가입
           </Link>
-          <span className="text-gray500 text-sm font-semibold leading-[21px] mt-[20.22px] mb-[15.09px]">
+          <span className="text-gray500 textSM font-semibold mt-[20.22px] mb-[15.09px]">
             OR
           </span>
           <div className="snsLoginWrapper flex gap-10">
