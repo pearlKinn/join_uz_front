@@ -11,11 +11,13 @@ const LoginPage = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogIn = () => {};
+  const handleLogIn = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+  };
   return (
     <section className="min-w-[360px] h-lvh flex flex-col">
       <header>
-        <h2 className="sr-only">LoginPage</h2>
+        <h1 className="sr-only">LoginPage</h1>
         <Logo />
       </header>
       <main>
@@ -70,14 +72,14 @@ const LoginPage = () => {
             </div>
             <div className="flex gap-1">
               <Link
-                href="/findId/authenticationCodeConfirm"
+                href="/findId/authenticationCodeRequest"
                 className="textSM text-gray500"
               >
                 아이디
               </Link>
               <span className="textSM text-gray500">ㅣ</span>
               <Link
-                href="/findPw/authenticationCodeConfirm"
+                href="/findPw/authenticationCodeRequest"
                 className="textSM text-gray500"
               >
                 비밀번호 찾기
