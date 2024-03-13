@@ -4,8 +4,8 @@ import { useRouter } from "next/navigation";
 
 interface TitleHeaderProps {
   title: string;
-  subTitle: string;
-  description: string;
+  subTitle?: string;
+  description?: string;
 }
 const TitleHeader: React.FC<TitleHeaderProps> = ({
   title,
