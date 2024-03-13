@@ -74,14 +74,14 @@ const LoginPage = () => {
             </div>
             <div className="flex gap-1">
               <Link
-                href="/findId/authenticationCodeConfirm"
+                href="/findId/authenticationCodeRequest"
                 className="textSM text-gray500"
               >
                 아이디
               </Link>
               <span className="textSM text-gray500">ㅣ</span>
               <Link
-                href="/findPw/authenticationCodeConfirm"
+                href="/findPw/authenticationCodeRequest"
                 className="textSM text-gray500"
               >
                 비밀번호 찾기
