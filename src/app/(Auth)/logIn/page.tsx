@@ -11,11 +11,13 @@ const LoginPage = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogIn = () => {};
+  const handleLogIn = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+  };
   return (
     <section className="min-w-[360px] h-lvh flex flex-col">
       <header>
-        <h2 className="sr-only">LoginPage</h2>
+        <h1 className="sr-only">LoginPage</h1>
         <Logo />
       </header>
       <main>
@@ -63,7 +65,9 @@ const LoginPage = () => {
                 )}
               </button>
               <span
-                className={`inline-block textSM font-semibold  ${persistLogin ? "text-gray600" : "text-gray400"}`}
+                className={`inline-block textSM font-semibold  ${
+                  persistLogin ? "text-gray600" : "text-gray400"
+                }`}
               >
                 로그인 상태 유지
               </span>

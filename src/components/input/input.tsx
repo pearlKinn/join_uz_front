@@ -8,10 +8,18 @@ interface InputProps {
   placeholder: string;
   type: string;
   defaultValue: string;
-	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  children?: React.ReactNode;
 }
 
-const Input: React.FC<InputProps> = ({ id, placeholder, type, defaultValue,onChange }) => {
+const Input: React.FC<InputProps> = ({
+  id,
+  placeholder,
+  type,
+  defaultValue,
+  onChange,
+  children,
+}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => setIsVisible(!isVisible);
@@ -44,12 +52,12 @@ const Input: React.FC<InputProps> = ({ id, placeholder, type, defaultValue,onCha
   };
 
   return (
-    <div className="w-[329px] h-[74px] relative">
+    <div className="w-[328px] h-[74px] relative">
       <label htmlFor={id} className="sr-only">
         {id}
       </label>
       <input
-        className="w-full h-[56px] pt-[10px] pb-[14px] pr-10 focus:outline-none border-b border-b-gray300 focus:border-b-primary600"
+        className="w-full h-[56px] pl-[10px] pt-[10px] pb-[14px] pr-10 focus:outline-none border-b border-b-gray300 focus:border-b-primary600"
         type={handleTypeChange()}
         name={id}
         id={id}
@@ -68,6 +76,7 @@ const Input: React.FC<InputProps> = ({ id, placeholder, type, defaultValue,onCha
           {visibility}
         </button>
       )}
+      {children}
     </div>
   );
 };
