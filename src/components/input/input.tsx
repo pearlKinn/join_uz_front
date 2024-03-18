@@ -7,8 +7,8 @@ interface InputProps {
   id: string;
   placeholder: string;
   type: string;
-  defaultValue: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  defaultValue?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   children?: React.ReactNode;
 }
 
@@ -51,6 +51,10 @@ const Input: React.FC<InputProps> = ({
     }
   };
 
+  const handleInputChange = (value) => {
+    console.log(value);
+  };
+
   return (
     <div className="w-[328px] h-[74px] relative">
       <label htmlFor={id} className="sr-only">
@@ -64,7 +68,7 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         maxLength={type === "text" ? 12 : 20}
         defaultValue={defaultValue}
-        onChange={onChange}
+        onChange={(e) => handleInputChange(e.target.value)}
         required
       />
       {type === "password" && (
