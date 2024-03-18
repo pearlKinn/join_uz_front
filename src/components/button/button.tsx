@@ -7,9 +7,10 @@ interface ButtonProps {
   children?: ReactNode;
   icon?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  type: "submit" | "button" | "reset";
   iconPosition?: "left" | "right";
   size?: "xxs" | "xs" | "sm" | "md" | "lg" | "xl";
-  type?: "cta" | "normal" | "outline" | "text";
+  StyleType?: "cta" | "normal" | "outline" | "text";
   disabled?: boolean;
 }
 
@@ -17,8 +18,9 @@ const Button: React.FC<ButtonProps> = ({
   children,
   icon,
   onClick,
+  type = "submit",
   size = "md",
-  type = "normal",
+  StyleType = "normal",
   iconPosition = "left",
   disabled = false,
 }) => {
@@ -31,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
     xxs: "w-[66px] h-7 textSM",
   };
 
-  const types = {
+  const StyleTypes = {
     cta: "bg-ctaActive hover:bg-ctaHover active:bg-ctaPushed disabled:bg-ctaInactive disabled:text-textInactive text-white",
     normal:
       "bg-btnActive hover:bg-btnHover active:bg-btnPushed disabled:bg-btnInactive disabled:text-textInactive  text-white",
@@ -41,12 +43,13 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   const buttonSize = sizes[size];
-  const buttonType = types[type];
+  const buttonStyleType = StyleTypes[StyleType];
 
   return (
     <button
       onClick={onClick}
-      className={`flex gap-2 items-center justify-center px-6 py-3 rounded-[10px] font-semibold ${buttonSize} ${buttonType}`}
+      type={type}
+      className={`flex gap-2 items-center justify-center px-6 py-3 rounded-[10px] font-semibold ${buttonSize} ${buttonStyleType}`}
       disabled={disabled}
     >
       {icon && iconPosition === "left" && (
