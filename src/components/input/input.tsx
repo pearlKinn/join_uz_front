@@ -43,7 +43,7 @@ const Input: React.FC<InputProps> = ({
     if (id === "ID") {
       // ID일 경우에는 항상 text로 고정되며, maxLength는 12입니다.
       return "text";
-    } else if (id === "password") {
+    } else if (id === "password" || id === "checkPassword") {
       // password일 경우에는 버튼을 클릭할 때마다 text와 password를 왔다갔다 합니다.
       return isVisible ? "text" : "password";
     } else {
